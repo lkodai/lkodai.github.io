@@ -1,0 +1,74 @@
+/****** BD *******/
+#bd {  
+    img.col1 {
+        max-width: 320px;
+        width: 41%;
+    }
+    img.col2 {
+        float: left;
+        max-width: 850px;
+    }
+    p.top {
+        border-left: 5px solid $yellow;
+        margin: 18% 5%;
+        padding-right: 1%;
+        width: 41%;
+    }
+    p.bottom {
+        border-top: 5px solid $yellow;
+    }
+}
+/******** 125 *************/
+#csuc {
+    h1 {
+        font-size: 1.6em;
+    }
+    img.col3, img.col4, img.col5, img.col7 {
+        width: 90%;
+        border: 10px solid black;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+    p.top {
+        border-right: 5px solid $blue;
+    }
+    p.middle {
+        border-left: 5px solid $blue;
+    }
+    p.bottom {
+        border-bottom: 5px solid $blue;
+    }
+}
+/********** PORTAL ***********/
+#portal {
+    p.top {
+        border-left: 5px solid $orange;
+    }
+    p.bottom {
+        border-right: 5px solid $orange;
+    }
+}
+/********** GALAXY ***********/
+#galaxy {
+    img.col2 {
+        margin-bottom: 2em;
+    }
+    p.top {
+        border-bottom: 5px solid $green;
+    }
+    p.bottom {
+        border-bottom: 5px solid $green;
+    }
+}
+/********** 40 STORIES ***********/
+#s40 {
+    p.top {
+        border-left: 5px solid $red;
+    }
+    p.middle {
+        border-right: 5px solid $red;
+    }
+    p.bottom {
+        border-top: 5px solid $red;
+    }
+}

@@ -1,0 +1,30 @@
+footer {
+    bottom: 0;
+    background-color: $dark-grey;
+    clear: both;
+    min-height: 18em;
+    position: absolute;
+    width: 100%;
+
+    #about {
+        margin: 0 auto;
+        max-width: 1240px;
+        padding: 5%;
+        width: 90%;
+
+        img {
+            border-radius: 14%;
+            margin-bottom: 3%;
+            margin-right: 5%;
+            max-width: 150px;
+            width: 25%;
+        }
+
+        p {
+            @include normal-text;
+            color: white;
+            line-height: 1.4em;
+            margin-top: 0;
+        }
+    }
+}

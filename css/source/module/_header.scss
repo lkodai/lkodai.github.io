@@ -1,0 +1,52 @@
+header {
+    @include heading-text;
+    background-color: $dark-grey;
+    margin: 0;
+    min-height: 4%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+}
+    nav {
+        color: white;
+        margin: 0 auto;
+        padding: 1% 2% 3%;
+        width: 95%;
+
+        a{
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: $orange;
+            }
+        }
+        ul {
+            display: inline;
+            float: left;
+            list-style-type: none;
+            margin: 0;
+            padding-left: 0;
+            width: 30%;
+
+            li {
+                display: inline;
+                font-weight: 200;
+                padding-right: 12%;
+                &:hover { 
+                    color: $orange;
+                }
+            }
+        }
+        p.contact {
+            float: right;
+            font-weight: light;
+            margin: 0;
+            padding-right: 1%;
+            width: 20%;
+
+            a {
+                padding: 0 9% 0 7%;
+            }
+        }
+    }

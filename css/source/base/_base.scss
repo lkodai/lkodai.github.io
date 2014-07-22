@@ -1,5 +1,3 @@
-$background-image--theme: none !default;
-
 //This file should only set standards for base html tags
 
 *, *:before, *:after {
@@ -7,24 +5,27 @@ $background-image--theme: none !default;
 }
 
 body {
-  font-family:$font-body;
-  background: $background-image--theme no-repeat center center fixed; 
-  background-size:cover;
+  @include normal-text;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family:$font-header;
+  @include heading-text;
+}
+h1 {
+    font-size: 1.7em;
+}
+h2 {
+    font-size: 1.4em;
 }
 
 a {
   cursor:pointer;
-  color:$color-ic--blue;
+  color:$orange;
   text-decoration:none;
   &:hover {
     text-decoration: underline;
   }
 }
 section {
-  @extend %cleared;
 }
 
 //reset lists because we typically don't utilize them in their default way. See Extends for normal lists

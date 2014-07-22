@@ -49,22 +49,21 @@ $break-large: 1200px; //1350px
     }
 }
 
-@mixin bg-transparentize($color: $color-ic--white, $transparency: .4) {
-    background: transparentize($color, $transparency);
-}
-
-@mixin corner-label($text: "Example", $left: auto, $right: auto, $color: #898989) {
-    &:after {
-    content:"#{$text}";
-    background:#000;
-    position:absolute;
-    top:0px;
-    right: $right;
-    left:$left;
-    padding:3px 4px;
-    font-size:10px;
-    color:$color;
-    border-radius:$border-radius--panel;
-    z-index: 2;
+@mixin normal-text {
+  font: {
+    family: 'Raleway', Helvetica Neue, Arial, sans-serif;
+    size: 14px;
+    weight: 200;
   }
-}
+  color: #000;
+} 
+@mixin heading-text {
+  font: {
+    family: 'Raleway', Helvetica Neue, Arial, sans-serif;
+    size: 20px;
+    weight: 700;
+    
+  }
+  color: #000;
+  text-transform: lowercase;
+} 

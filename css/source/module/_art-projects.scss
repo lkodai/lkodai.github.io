@@ -1,0 +1,64 @@
+/********** DARWIN STUDY **********/
+#darwin{
+    p.top {
+        border-left: 5px solid $yellow;
+    }
+    p.bottom {
+        border-top: 5px solid $yellow;
+    }
+    img.col2 {
+        max-width: 540px;
+    }
+}
+/*********** WHISKEY ENDEAVORS *******/
+#whiskey {
+    iframe {
+        width: 100%;
+        height: 243px;
+        margin-top: 5%;
+    }
+    p.top {
+        border-bottom: 5px solid $blue;
+    }
+    p.bottom {
+        border-left: 5px solid $blue;
+    }
+}
+/************ MANIPS ****************/
+#manip {
+    p.top {
+        border-right: 5px solid $orange;
+    }
+    img.col1 {
+        max-width: 792px;
+    }
+}
+/************ CHARCOAL *****************/
+#charcoal {
+    p.top {
+        border-right: 5px solid $green;
+    }
+    p.middle {
+        border-top: 5px solid $green;
+    }
+    p.two {
+        border-top: none;
+        margin-top: 0;
+    }
+    img.col1, img.col2 {
+        max-width: 1024px;
+        text-align: center;
+    }
+}
+/************* SILLINESS *****************/
+#silliness {
+    p.top {
+        border-bottom: 5px solid $red;
+    }
+    p.middle {
+        border-left: 5px solid $red;
+    }
+    img.col2 {
+        margin-bottom: 5%;
+    }
+}

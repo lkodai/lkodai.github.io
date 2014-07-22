@@ -5,6 +5,12 @@
 @import "base/_config"; 
 
 //modules
-//@import "module/_nav";
-
+@import "module/_layout";
+@import "module/_header";
+@import "module/_footer";
+@import "module/_error"; 
+@import "module/_global-project";
+@import "module/_thumbnails"; 
+@import "module/_art-projects"; 
+@import "module/_web-projects"; 
 
