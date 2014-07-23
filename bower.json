@@ -11,8 +11,7 @@
   ],
   "dependencies": {
     "normalize-css": "~3.0.1",
-    "bourbon": "~3.1.8",
-    "font-awesome": "~4.0.3"
+    "bourbon": "~3.1.8"
   },
   "devDependencies": {}
 }

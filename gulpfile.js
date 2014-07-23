@@ -21,7 +21,7 @@ var gulp = require('gulp'),
 //     .pipe(notify({ message: 'Includes: included' }));
 // });
 gulp.task('fileinclude', function() {
-  gulp.src(['./tpl/*.tpl.html'])
+  gulp.src(['./tpl/*.tpl.html', './tpl/*/*.tpl.html'])
     
     .pipe(fileinclude())
     .pipe(rename({
@@ -70,7 +70,8 @@ gulp.task('watch', function() {
 
     // watch task for gulp-includes
     gulp.watch('partials/**/*.html', ['fileinclude']);
-    gulp.watch('tlp/*.tpl.html');
+    gulp.watch('tpl/*.tpl.html');
+    gulp.watch('tpl/*/*.tpl.html');
 
   });
 
