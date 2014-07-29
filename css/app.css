@@ -111,13 +111,40 @@ ul, ol {
   padding: 0;
   list-style: none; }
 
-.container {
+.main {
   font-weight: 400;
   margin: 14% auto;
   max-width: 1240px;
   padding-bottom: 5%;
   position: relative;
   width: 90%; }
+  @media screen and (min-width: 480px) {
+    .main {
+      margin-top: 12%; }
+      .main h1 {
+        font-size: 2em; }
+      .main h2 {
+        font-size: 1.6em; } }
+  @media screen and (min-width: 640px) {
+    .main {
+      margin-top: 10%; }
+      .main h1 {
+        font-size: 2.1em; } }
+  @media screen and (min-width: 960px) {
+    .main {
+      margin-top: 13%; }
+      .main h1 {
+        margin-bottom: 5%; }
+      .main h1 + h2 {
+        margin-top: -2%; } }
+  @media screen and (min-width: 1024px) {
+    .main {
+      margin-bottom: 7%;
+      margin-top: 7%; }
+      .main h1 {
+        font-size: 2.4em; }
+      .main h2 {
+        font-size: 2em; } }
 
 header {
   font-family: 'Raleway', Helvetica Neue, Arial, sans-serif;
@@ -132,6 +159,9 @@ header {
   top: 0;
   width: 100%;
   z-index: 10000; }
+  @media screen and (min-width: 640px) {
+    header {
+      min-height: 5%; } }
 
 nav {
   color: white;
@@ -164,6 +194,22 @@ nav {
     width: 20%; }
     nav p.contact a {
       padding: 0 9% 0 7%; }
+  @media screen and (min-width: 640px) {
+    nav {
+      font-size: 1.1em;
+      padding: 1.3% 2% 3%; }
+      nav p.contact a {
+        font-size: 1.2em; } }
+  @media screen and (min-width: 1024px) {
+    nav {
+      padding: 1% 2% 3.5%; }
+      nav ul li {
+        padding-right: 12%; }
+      nav p.contact a {
+        font-size: 1.3em; } }
+  @media screen and (min-width: 1240px) {
+    nav {
+      padding: 0.8% 2% 2.8%; } }
 
 footer {
   bottom: 0;
@@ -191,6 +237,38 @@ footer {
       color: white;
       line-height: 1.4em;
       margin-top: 0; }
+    @media screen and (min-width: 480px) {
+      footer #about img {
+        width: 18%; }
+      footer #about p {
+        font-size: 1.2em; } }
+    @media screen and (min-width: 960px) {
+      footer #about {
+        padding-top: 4%; }
+        footer #about p {
+          line-height: 1.6em; }
+        footer #about img {
+          width: 12%; } }
+  @media screen and (min-width: 640px) {
+    footer {
+      min-height: 14em; }
+      footer #about img {
+        width: 16%; }
+      footer #about p {
+        font-size: 1.2em;
+        line-height: 1.45em; } }
+  @media screen and (min-width: 1024px) {
+    footer {
+      min-height: 17em; }
+      footer #about {
+        float: left;
+        padding: 3%;
+        width: 80%; }
+        footer #about p {
+          font-size: 1.4em;
+          line-height: 1.7em; }
+        footer #about img {
+          width: 15%; } }
 
 .wrap404 {
   margin-left: -6%;
@@ -205,6 +283,15 @@ footer {
     padding-left: 5%;
     vertical-align: top;
     width: 45%; }
+  @media screen and (min-width: 640px) {
+    .wrap404 p {
+      font-size: 1.8em; } }
+  @media screen and (min-width: 1024px) {
+    .wrap404 p {
+      font-size: 2.2em; } }
+  @media screen and (min-width: 1400px) {
+    .wrap404 {
+      margin-left: -9%; } }
 
 .project img {
   display: inline-block;
@@ -217,10 +304,22 @@ footer {
   padding: 3%;
   vertical-align: top;
   width: 90%; }
+@media screen and (min-width: 480px) {
+  .project p {
+    font-size: 1.3em; } }
+@media screen and (min-width: 640px) {
+  .project p {
+    font-size: 1.5em; } }
+@media screen and (min-width: 960px) {
+  .project p {
+    font-size: 1.7em; } }
 
 .thumb-index {
   max-width: 1078px;
   margin-bottom: 15%; }
+  @media screen and (min-width: 1024px) {
+    .thumb-index {
+      margin-bottom: 10%; } }
 
 .thumb-indiv {
   display: inline-block;
@@ -259,6 +358,18 @@ footer {
       font-size: 0.8em;
       font-weight: 400;
       line-height: 1.2em; }
+  @media screen and (min-width: 640px) {
+    .thumb-indiv .label {
+      padding: 0.5em; }
+      .thumb-indiv .label p {
+        font-size: 1.3em;
+        line-height: 1em;
+        margin: 0.3em 0; }
+      .thumb-indiv .label .small {
+        font-size: 1em; } }
+  @media screen and (min-width: 960px) {
+    .thumb-indiv .label {
+      width: 20%; } }
 
 /** THUMBNAIL COLOR ASSIGNMENT **/
 .thumb-indiv.w1 {
@@ -309,6 +420,14 @@ footer {
     color: black;
     opacity: 1; }
 
+.thumb-indiv.w7 {
+  background-color: #19b4a0;
+  color: #19b4a0;
+  opacity: 0.2; }
+  .thumb-indiv.w7:hover {
+    color: black;
+    opacity: 1; }
+
 /********** DARWIN STUDY **********/
 #darwin p.top {
   border-left: 5px solid #e59905; }
@@ -316,6 +435,28 @@ footer {
   border-top: 5px solid #e59905; }
 #darwin img.col2 {
   max-width: 540px; }
+@media screen and (min-width: 640px) {
+  #darwin p.bottom {
+    border-top: none;
+    border-right: 5px solid #e59905;
+    margin-bottom: 25%;
+    margin-top: 19%;
+    width: 30%; }
+  #darwin img.col1 {
+    margin-bottom: 5%; }
+  #darwin img.col2 {
+    width: 60%;
+    float: right; } }
+@media screen and (min-width: 1024px) {
+  #darwin p.top {
+    float: right;
+    margin-top: 23%;
+    width: 30%; }
+  #darwin img.col1 {
+    width: 60%; } }
+@media screen and (min-width: 1240px) {
+  #darwin img.col2 {
+    margin-right: 10%; } }
 
 /*********** WHISKEY ENDEAVORS *******/
 #whiskey iframe {
@@ -326,12 +467,43 @@ footer {
   border-bottom: 5px solid #19b4a0; }
 #whiskey p.bottom {
   border-left: 5px solid #19b4a0; }
+@media screen and (min-width: 480px) {
+  #whiskey iframe {
+    height: 355px; }
+  #whiskey p.top {
+    margin-bottom: 10%; } }
+@media screen and (min-width: 640px) {
+  #whiskey iframe {
+    max-width: 853px;
+    height: 480px;
+    margin: 3% auto; } }
+@media screen and (min-width: 960px) {
+  #whiskey p.bottom {
+    width: 45%; }
+  #whiskey img.col1, #whiskey img.col2, #whiskey img.col3 {
+    width: 48%; }
+  #whiskey img.col1 {
+    margin-bottom: 10%; }
+  #whiskey img.col2 {
+    float: right; } }
+@media screen and (min-width: 1400px) {
+  #whiskey iframe {
+    margin-bottom: 10%; }
+  #whiskey p.top {
+    margin-left: 5%;
+    width: 20%; } }
 
 /************ MANIPS ****************/
 #manip p.top {
   border-right: 5px solid #ef5b13; }
 #manip img.col1 {
   max-width: 792px; }
+@media screen and (min-width: 960px) {
+  #manip p.top {
+    width: 30%;
+    float: right; }
+  #manip img.col1 {
+    width: 60%; } }
 
 /************ CHARCOAL *****************/
 #charcoal p.top {
@@ -352,6 +524,12 @@ footer {
   border-left: 5px solid #dd3716; }
 #silliness img.col2 {
   margin-bottom: 5%; }
+@media screen and (min-width: 768px) {
+  #silliness img.col2 {
+    padding-right: 5%; }
+  #silliness img.col2, #silliness img.col3 {
+    width: 45%;
+    vertical-align: top; } }
 
 /****** BD *******/
 #bd img.col1 {
@@ -367,6 +545,21 @@ footer {
   width: 41%; }
 #bd p.bottom {
   border-top: 5px solid #e59905; }
+@media screen and (min-width: 960px) {
+  #bd p.top {
+    margin: 12% 6%;
+    width: 38%; } }
+@media screen and (min-width: 1024px) {
+  #bd img.col1 {
+    margin-top: 1%;
+    width: 22%; }
+  #bd img.col2 {
+    width: 60%; }
+  #bd img.col4 {
+    width: 50%; }
+  #bd p.top {
+    margin: 4% 2%;
+    width: 40%; } }
 
 /******** 125 *************/
 #csuc h1 {
@@ -382,6 +575,30 @@ footer {
   border-left: 5px solid #19b4a0; }
 #csuc p.bottom {
   border-bottom: 5px solid #19b4a0; }
+@media screen and (min-width: 640px) {
+  #csuc h1 {
+    font-size: 1.8em; } }
+@media screen and (min-width: 960px) {
+  #csuc h1 {
+    font-size: 2.4em; }
+  #csuc img.col1 {
+    width: 50%; }
+  #csuc img.col3, #csuc img.col4 {
+    margin-bottom: 5%;
+    margin-right: 4%;
+    width: 60%; }
+  #csuc img.col5, #csuc img.col6, #csuc img.col7 {
+    width: 43%; }
+  #csuc img.col5 {
+    background-color: #893604;
+    margin-right: 3%;
+    padding-bottom: 6%; }
+  #csuc p.top {
+    margin-top: 3%;
+    width: 30%; }
+  #csuc p.middle, #csuc p.bottom {
+    margin-top: 6%;
+    width: 20%; } }
 
 /********** PORTAL ***********/
 #portal p.top {
@@ -396,6 +613,21 @@ footer {
   border-bottom: 5px solid #79bd2f; }
 #galaxy p.bottom {
   border-bottom: 5px solid #79bd2f; }
+@media screen and (min-width: 960px) {
+  #galaxy p.top, #galaxy p.bottom {
+    margin: -2% 2% inherit;
+    vertical-align: top;
+    width: 33%; }
+  #galaxy p.top {
+    margin-bottom: 6%; }
+  #galaxy p.bottom {
+    float: left;
+    margin-top: 5%; }
+  #galaxy img.col1, #galaxy img.col2 {
+    width: 57%; } }
+@media screen and (min-width: 1240px) {
+  #galaxy p.top {
+    margin-top: 2.5%; } }
 
 /********** 40 STORIES ***********/
 #s40 p.top {
@@ -404,3 +636,16 @@ footer {
   border-right: 5px solid #dd3716; }
 #s40 p.bottom {
   border-top: 5px solid #dd3716; }
+@media screen and (min-width: 960px) {
+  #s40 p.top {
+    vertical-align: top;
+    width: 34%;
+    margin-bottom: 6%; }
+  #s40 p.middle {
+    float: right;
+    width: 34%; }
+  #s40 p.bottom {
+    margin-top: 5%; }
+  #s40 img.col1, #s40 img.col2 {
+    margin-bottom: 7%;
+    width: 58%; } }
