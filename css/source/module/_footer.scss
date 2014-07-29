@@ -1,17 +1,15 @@
 footer {
-    bottom: 0;
+    //bottom: 0;
     background-color: $dark-grey;
     clear: both;
-    min-height: 18em;
+    //min-height: 18em;
     position: absolute;
     width: 100%;
-
     #about {
         margin: 0 auto;
         max-width: 1240px;
         padding: 5%;
         width: 90%;
-
         img {
             border-radius: 14%;
             margin-bottom: 3%;
@@ -19,7 +17,6 @@ footer {
             max-width: 150px;
             width: 25%;
         }
-
         p {
             @include normal-text;
             color: white;
@@ -45,7 +42,7 @@ footer {
         }
     }
     @media screen and (min-width: 640px){
-        min-height: 14em;
+        //min-height: 14em;
         #about {
             img {
                 width: 16%;
@@ -58,7 +55,7 @@ footer {
         }
     }
     @media screen and (min-width: 1024px) {
-        min-height: 17em;
+        //min-height: 17em;
         #about {
             float: left;
             padding: 3%;

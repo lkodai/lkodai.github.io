@@ -22,7 +22,6 @@ var gulp = require('gulp'),
 // });
 gulp.task('fileinclude', function() {
   gulp.src(['./tpl/*.tpl.html', './tpl/*/*.tpl.html'])
-    
     .pipe(fileinclude())
     .pipe(rename({
         extname: ""
@@ -70,8 +69,7 @@ gulp.task('watch', function() {
 
     // watch task for gulp-includes
     gulp.watch('partials/**/*.html', ['fileinclude']);
-    gulp.watch('tpl/*.tpl.html');
-    gulp.watch('tpl/*/*.tpl.html');
+    gulp.watch('tpl/**', ['fileinclude']);
 
   });
 

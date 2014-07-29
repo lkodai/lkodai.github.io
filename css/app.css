@@ -113,7 +113,7 @@ ul, ol {
 
 main {
   font-weight: 400;
-  margin: 14% auto;
+  margin: 14% auto 0;
   max-width: 1240px;
   padding-bottom: 5%;
   position: relative;
@@ -139,7 +139,6 @@ main {
         margin-top: -2%; } }
   @media screen and (min-width: 1024px) {
     main {
-      margin-bottom: 7%;
       margin-top: 7%; }
       main h1 {
         font-size: 2.4em; }
@@ -172,7 +171,8 @@ nav {
     color: white;
     text-decoration: none; }
     nav a:hover {
-      color: #ef5b13; }
+      color: #ef5b13;
+      text-decoration: none; }
   nav ul {
     display: inline;
     float: left;
@@ -194,6 +194,8 @@ nav {
     width: 20%; }
     nav p.contact a {
       padding: 0 9% 0 7%; }
+      nav p.contact a:hover {
+        text-decoration: none; }
   @media screen and (min-width: 640px) {
     nav {
       font-size: 1.1em;
@@ -212,10 +214,8 @@ nav {
       padding: 0.8% 2% 2.8%; } }
 
 footer {
-  bottom: 0;
   background-color: #222;
   clear: both;
-  min-height: 18em;
   position: absolute;
   width: 100%; }
   footer #about {
@@ -250,25 +250,21 @@ footer {
         footer #about img {
           width: 12%; } }
   @media screen and (min-width: 640px) {
-    footer {
-      min-height: 14em; }
-      footer #about img {
-        width: 16%; }
-      footer #about p {
-        font-size: 1.2em;
-        line-height: 1.45em; } }
+    footer #about img {
+      width: 16%; }
+    footer #about p {
+      font-size: 1.2em;
+      line-height: 1.45em; } }
   @media screen and (min-width: 1024px) {
-    footer {
-      min-height: 17em; }
-      footer #about {
-        float: left;
-        padding: 3%;
-        width: 80%; }
-        footer #about p {
-          font-size: 1.4em;
-          line-height: 1.7em; }
-        footer #about img {
-          width: 15%; } }
+    footer #about {
+      float: left;
+      padding: 3%;
+      width: 80%; }
+      footer #about p {
+        font-size: 1.4em;
+        line-height: 1.7em; }
+      footer #about img {
+        width: 15%; } }
 
 .wrap404 {
   margin-left: -6%;
@@ -327,17 +323,19 @@ footer {
   max-width: 256px;
   padding-left: 1.5%;
   width: 43%; }
+  .thumb-indiv:hover .thumb-img {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out; }
   .thumb-indiv .thumb-img {
     float: left;
     margin-bottom: -3px;
-    opacity: 1;
     position: relative;
-    transition: opacity 0.15s ease-in-out;
-    -webkit-transition: opacity 0.15s ease-in-out;
-    -moz-transition: opacity 0.15s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     z-index: 2; }
-    .thumb-indiv .thumb-img:hover {
-      opacity: 0; }
     .thumb-indiv .thumb-img img {
       max-width: 256px;
       width: 100%; }
@@ -374,59 +372,45 @@ footer {
 /** THUMBNAIL COLOR ASSIGNMENT **/
 .thumb-indiv.w1 {
   background-color: #e59905;
-  color: #e59905;
-  opacity: 0.2; }
+  color: #e59905; }
   .thumb-indiv.w1:hover {
-    color: black;
-    opacity: 1; }
+    color: black; }
 
 .thumb-indiv.w2 {
   background-color: #19b4a0;
-  color: #19b4a0;
-  opacity: 0.2; }
+  color: #19b4a0; }
   .thumb-indiv.w2:hover {
-    color: black;
-    opacity: 1; }
+    color: black; }
 
 .thumb-indiv.w3 {
   background-color: #ef5b13;
-  color: #ef5b13;
-  opacity: 0.2; }
+  color: #ef5b13; }
   .thumb-indiv.w3:hover {
-    color: black;
-    opacity: 1; }
+    color: black; }
 
 .thumb-indiv.w4 {
   background-color: #79bd2f;
-  color: #79bd2f;
-  opacity: 0.2; }
+  color: #79bd2f; }
   .thumb-indiv.w4:hover {
-    color: black;
-    opacity: 1; }
+    color: black; }
 
 .thumb-indiv.w5 {
   background-color: #dd3716;
-  color: #dd3716;
-  opacity: 0.2; }
+  color: #dd3716; }
   .thumb-indiv.w5:hover {
-    color: black;
-    opacity: 1; }
+    color: black; }
 
 .thumb-indiv.w6 {
   background-color: #e59905;
-  color: #e59905;
-  opacity: 0.2; }
+  color: #e59905; }
   .thumb-indiv.w6:hover {
-    color: black;
-    opacity: 1; }
+    color: black; }
 
 .thumb-indiv.w7 {
   background-color: #19b4a0;
-  color: #19b4a0;
-  opacity: 0.2; }
+  color: #19b4a0; }
   .thumb-indiv.w7:hover {
-    color: black;
-    opacity: 1; }
+    color: black; }
 
 /********** DARWIN STUDY **********/
 #darwin p.top {
