@@ -516,6 +516,31 @@ footer {
     width: 45%;
     vertical-align: top; } }
 
+#api img {
+  max-width: 320px;
+  width: 100%; }
+#api p.top {
+  border-bottom: 5px solid #e59905;
+  margin-bottom: 5%; }
+#api p.middle {
+  border-left: 5px solid #e59905; }
+#api p.bottom {
+  border-right: 5px solid #e59905; }
+@media screen and (min-width: 640px) {
+  #api img {
+    width: 48%; }
+  #api p.middle, #api p.bottom {
+    float: left;
+    width: 50%;
+    margin-top: 25%; }
+  #api p.bottom {
+    float: right; } }
+@media screen and (min-width: 960px) {
+  #api img.col1 {
+    margin-right: 15%; }
+  #api p.middle, #api p.bottom {
+    width: 65%; } }
+
 /****** BD *******/
 #bd img.col1 {
   max-width: 320px;

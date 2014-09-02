@@ -1,3 +1,40 @@
+#api {
+    img {
+        max-width: 320px;
+        width: 100%;
+    }
+    p.top {
+        border-bottom: 5px solid $yellow;
+        margin-bottom: 5%;
+    }
+    p.middle {
+        border-left: 5px solid $yellow;
+    }
+    p.bottom {
+        border-right: 5px solid $yellow;
+    }
+    @media screen and (min-width: 640px){
+        img {
+            width: 48%;
+        }
+        p.middle, p.bottom {
+            float: left;
+            width: 50%;
+            margin-top: 25%;
+        }
+        p.bottom {
+            float: right;
+        }
+    }
+    @media screen and (min-width: 960px){ 
+        img.col1 {
+            margin-right: 15%;
+        }
+        p.middle, p.bottom {
+            width: 65%;
+        }
+    }
+}
 /****** BD *******/
 #bd {  
     img.col1 {
