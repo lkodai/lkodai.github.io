@@ -516,6 +516,7 @@ footer {
     width: 45%;
     vertical-align: top; } }
 
+/***** API MOBILE DEMO ******/
 #api img {
   max-width: 320px;
   width: 100%; }
@@ -610,12 +611,6 @@ footer {
     margin-top: 6%;
     width: 20%; } }
 
-/********** PORTAL ***********/
-#portal p.top {
-  border-left: 5px solid #ef5b13; }
-#portal p.bottom {
-  border-right: 5px solid #ef5b13; }
-
 /********** GALAXY ***********/
 #galaxy img.col2 {
   margin-bottom: 2em; }
@@ -638,6 +633,16 @@ footer {
 @media screen and (min-width: 1240px) {
   #galaxy p.top {
     margin-top: 2.5%; } }
+
+/********** INCOMM INCENTIVES ***********/
+#incentives p.top {
+  border-left: 5px solid #19b4a0; }
+
+/********** PORTAL ***********/
+#portal p.top {
+  border-left: 5px solid #ef5b13; }
+#portal p.bottom {
+  border-right: 5px solid #ef5b13; }
 
 /********** 40 STORIES ***********/
 #s40 p.top {

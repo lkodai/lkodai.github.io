@@ -1,3 +1,4 @@
+/***** API MOBILE DEMO ******/
 #api {
     img {
         max-width: 320px;
@@ -132,15 +133,6 @@
         }
     }
 }
-/********** PORTAL ***********/
-#portal {
-    p.top {
-        border-left: 5px solid $orange;
-    }
-    p.bottom {
-        border-right: 5px solid $orange;
-    }
-}
 /********** GALAXY ***********/
 #galaxy {
     img.col2 {
@@ -173,6 +165,21 @@
         p.top {
             margin-top: 2.5%;
         }
+    }
+}
+/********** INCOMM INCENTIVES ***********/
+#incentives {
+    p.top {
+        border-left: 5px solid $blue;
+    }
+}
+/********** PORTAL ***********/
+#portal {
+    p.top {
+        border-left: 5px solid $orange;
+    }
+    p.bottom {
+        border-right: 5px solid $orange;
     }
 }
 /********** 40 STORIES ***********/
