@@ -1,69 +1,61 @@
 //Declare Responsive targets
-$break-mobile: 470px;
+//$break-mobile: 470px;
+$break-smaller: 600px;
 $break-small: 768px;
+$break-medium: 1024px;
 $break-large: 1200px; //1350px
 
 @mixin breakpoint($media) {
-  @if $media == mobile {
-    @media only screen and (max-width: $break-mobile) { @content; }
+  // @if $media == mobile {
+  //   @media only screen and (max-width: $break-mobile) { @content; }
+  // }
+  @if $media == smaller {
+    @media only screen and (min-width: $break-smaller) {@content; }
   }
   @if $media == small {
-    @media only screen and (max-width: $break-small) and (min-width:$break-mobile + 1) { @content; }
+    @media only screen and (min-width: $break-small) { @content; }
   }
   @else if $media == medium {
-    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+    @media only screen and (min-width: $break-medium) { @content; }
   }
   @else if $media == wide {
     @media only screen and (min-width: $break-large) { @content; }
   }
 }
-
-// Custom Animation
-@include keyframes(spin) { // Full Spin
-  from { @include transform(rotate(0deg)); }
-  to { @include transform(rotate(360deg)); }
-}
-@include keyframes(tilt) { // Side tilt
-  0% { @include transform(rotate(0deg)); }
-  25% { @include transform(rotate(7deg)); }
-  75% { @include transform(rotate(-7deg)); }
-}
-
-
-@mixin spinner {
-  -webkit-animation: {
-    duration:.5s;
-    name: spin;
-    direction: normal;
-    iteration-count: infinite;
-    timing-function: linear;
-    }
-}
-@mixin tilter {
-  -webkit-animation: {
-    duration:5s;
-    name: tilt;
-    direction: normal;
-    iteration-count: infinite;
-    timing-function: linear;
-    }
-}
-
 @mixin normal-text {
   font: {
     family: 'Raleway', Helvetica Neue, Arial, sans-serif;
-    size: 14px;
+    size: $basesize;
     weight: 200;
   }
+  line-height: $leading;
   color: #000;
+  @include breakpoint(small) {
+    font-size: $basesize*1.1;
+    line-height: $leading*1.1;
+  }
+  @include breakpoint(medium) {
+    font-size: $basesize*1.3;
+    line-height: $leading*1.3;
+  }
+  @include breakpoint(wide) {
+    font-size: $basesize*1.4;
+    line-height: $leading*1.4;
+  }
 } 
 @mixin heading-text {
   font: {
     family: 'Raleway', Helvetica Neue, Arial, sans-serif;
-    size: 20px;
+    size: $basesize*2;
     weight: 700;
-    
   }
+  line-height: $leading*2;
   color: #000;
   text-transform: lowercase;
+  @include breakpoint(medium) {
+    font-size: $basesize*2.2;
+  }
+  @include breakpoint(wide) {
+    font-size: $basesize*2.4;
+  }
 } 

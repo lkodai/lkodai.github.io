@@ -1,23 +1,33 @@
 header {
-    @include heading-text;
+    @include normal-text;
     background-color: $dark-grey;
+    font-size: $basesize*1.3;
     margin: 0;
-    min-height: 4%;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10000;
-    @media screen and (min-width: 640px){
-        min-height: 5%;
+    @include breakpoint(small) {
+        font-size: $basesize*1.5;
+    }
+    @include breakpoint(medium) {
+        font-size: $basesize*1.7;
     }
 }
     nav {
         color: white;
         margin: 0 auto;
-        padding: 1% 2% 3%;
+        padding: $leading/4 0 $leading/4;
+        text-align: center;
         width: 95%;
-        line-height: 1em;
-        a{
+        max-width: 1024px;
+        @include breakpoint(smaller) {
+            text-align: left;
+        }
+        @include breakpoint (medium) {
+            margin-left: $gutter;
+        }
+        a {
             color: white;
             text-decoration: none;
             &:hover {
@@ -26,13 +36,15 @@ header {
             }
         }
         ul {
-            display: inline;
-            float: left;
+            display: inline-block;
             list-style-type: none;
             margin: 0;
-            padding-left: 0;
-            width: 50%;
-
+            text-align: left;
+            width: $half;
+            vertical-align: top;
+            @include breakpoint(small) {
+                margin-right: $gutter;
+            }
             li {
                 display: inline;
                 font-weight: 200;
@@ -43,42 +55,16 @@ header {
             }
         }
         p.contact {
-            float: right;
-            font-weight: light;
+            display: inline-block;
+            margin-left: -4px; //wat
+            position:relative;
             margin: 0;
-            padding-right: 1%;
-            width: 40%;
-
             a {
-                padding: 0 9% 0 7%;
+                padding-right: $gutter;
                 &:hover {
                     text-decoration: none;
                 }
             }
         }
-        @media screen and (min-width: 640px){
-            font-size: 1.1em;
-            padding: 1.3% 2% 3%;
-            p.contact {
-                a {
-                    font-size: 1.2em;
-                }
-            }
-        }
-        @media screen and (min-width: 1024px) {
-            padding: 1% 2% 3.5%;
-            ul {
-                li {
-                    padding-right: 12%;
-                }
-            }
-            p.contact {
-                a {
-                    font-size: 1.3em;
-                }
-            }
-        }
-        @media screen and (min-width: 1240px) {
-            padding: .8% 2% 2.8%;
-        }
+        
     }

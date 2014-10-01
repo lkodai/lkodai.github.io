@@ -1,16 +1,16 @@
 .thumb-index {
     max-width: 1078px;
-    margin-bottom: 15%;
-    @media screen and (min-width: 1024px) {
-        margin-bottom: 10%;
-    }
+    margin-bottom: $leading;
 }
 .thumb-indiv {
     display: inline-block;
-    margin: 1%;
+    margin: 0 $gutter/2 $leading/2 0;
     max-width: 256px;
-    padding-left: 1.5%;
+    padding-left: $gutter/4;
     width: 43%;
+    @include breakpoint(small) {
+        margin: 0 $gutter $leading 0;
+    }
     &:hover {
         .thumb-img {
             opacity: 0;
@@ -19,7 +19,7 @@
     }
     .thumb-img {
         float: left;
-        margin-bottom: -3px;
+        margin-bottom: -6px;
         position: relative;
         @include transition(all .2s ease-in-out);
         z-index: 2; 
@@ -29,43 +29,39 @@
         }
     }
     .label {
+        display: none;
         float: left;
-        font-weight: 400;
         overflow: hidden;
-        padding: .3em;
+        padding-top: $leading/4;
         position: absolute;
-        width: 40%;
+        width: 38.5%;
         z-index: 1;
-            
+        @include breakpoint (smaller) {
+            display: block;
+        }
+        @include breakpoint (small) {
+            width: 28%;
+        }
+        @include breakpoint (medium) {
+            width: 25%;
+        }
+        @include breakpoint (wide) {
+            width: 19%;
+        }
         p {
-            font-size: .9em;
+            font-size: $basesize*1.2;
             font-weight: 700;
-            line-height: 1em;
             margin: .3em 0;
+            @include breakpoint (wide) {
+                font-size: $basesize*1.35;
+            }
         }
         .small {
-            font-size: .8em; 
-            font-weight: 400;             
-        }
-    }
-    @media screen and (min-width: 640px){
-        .label {
-            padding: .5em;
-            width: 31%;
-            
-            p {
-                font-size: 1.3em;
-                line-height: 1.2em;
-                margin: .3em 0;
-            }
-            .small {
-                font-size: 1.3em;
-            }
-        }
-    }
-    @media screen and (min-width: 960px) {
-        .label {
-            width: 20%;
+            font-size: $basesize; 
+            font-weight: 400;   
+            @include breakpoint (wide) {
+                font-size: $basesize*1.2;
+            }          
         }
     }
 }

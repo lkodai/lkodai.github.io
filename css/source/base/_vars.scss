@@ -8,7 +8,10 @@ $font-weight--bold: 800;
 
 $half:49.5%;
 $third:33.33%;
-$gutter:28px;
+
+$basesize: 16px;
+$leading: $basesize*1.375;
+$gutter: $basesize*1.375;
 
 $i:1;
 $webthumbs: 7;
