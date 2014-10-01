@@ -20,7 +20,7 @@
 /node_modules
 
 # Ignore Node_Modules - naturally
-/bower_components
+/bower_components/bourbon
 
 #Ignore unnecessary working images
 *.psd
