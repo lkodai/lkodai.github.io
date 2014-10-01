@@ -29,7 +29,7 @@ gulp.task('fileinclude', function() {
     .pipe(rename({
         extname: ".html"
       }))
-    .pipe(gulp.dest('./out/'))
+    .pipe(gulp.dest(''))
     .pipe(livereload(server))
     .pipe(notify({ message: 'Includes: included' }));
 });
