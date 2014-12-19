@@ -40,7 +40,7 @@ header {
             list-style-type: none;
             margin: 0;
             text-align: left;
-            width: $half;
+            width: 51.5%;
             vertical-align: top;
             @include breakpoint(small) {
                 margin-right: $gutter;

@@ -135,7 +135,7 @@ nav {
     list-style-type: none;
     margin: 0;
     text-align: left;
-    width: 49.5%;
+    width: 51.5%;
     vertical-align: top; }
     @media only screen and (min-width: 768px) {
       nav ul {
@@ -216,9 +216,6 @@ footer {
     vertical-align: top;
     width: 45%; }
 
-.project h1 {
-  font-size: 24px;
-  line-height: 33px; }
 .project h1 + .top {
   margin-top: 0; }
 .project img {
@@ -252,7 +249,7 @@ footer {
     transition: all 0.3s ease-in-out; }
   .thumb-indiv .thumb-img {
     float: left;
-    margin-bottom: -6px;
+    margin-bottom: -7px;
     position: relative;
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
@@ -266,6 +263,8 @@ footer {
     float: left;
     overflow: hidden;
     padding-top: 5.5px;
+    padding-left: 5px;
+    padding-right: 25px;
     position: absolute;
     width: 38.5%;
     z-index: 1; }
@@ -287,13 +286,13 @@ footer {
       margin: 0.3em 0; }
       @media only screen and (min-width: 1200px) {
         .thumb-indiv .label p {
-          font-size: 21.6px; } }
+          font-size: 20.8px; } }
     .thumb-indiv .label .small {
       font-size: 16px;
       font-weight: 400; }
       @media only screen and (min-width: 1200px) {
         .thumb-indiv .label .small {
-          font-size: 19.2px; } }
+          font-size: 17.6px; } }
 
 /** THUMBNAIL COLOR ASSIGNMENT **/
 .thumb-indiv.w1 {
@@ -415,11 +414,34 @@ footer {
   #manip img.col1 {
     width: 60%; } }
 
+/******* METALWORK *********/
+#metal p.top {
+  border-left: 5px solid #79bd2f; }
+#metal p.bottom {
+  border-top: 5px solid #79bd2f; }
+#metal img.col2 {
+  max-width: 540px; }
+@media screen and (min-width: 640px) {
+  #metal p.bottom {
+    border-top: none;
+    border-right: 5px solid #79bd2f;
+    margin-bottom: 25%;
+    width: 30%; }
+  #metal img.col1 {
+    margin-bottom: 5%; }
+  #metal img.col2 {
+    width: 60%;
+    float: right; } }
+@media screen and (min-width: 1024px) {
+  #metal img.col2 {
+    float: none;
+    margin-left: 8%; } }
+
 /************ CHARCOAL *****************/
 #charcoal p.top {
-  border-right: 5px solid #79bd2f; }
+  border-right: 5px solid #dd3716; }
 #charcoal p.middle {
-  border-top: 5px solid #79bd2f; }
+  border-top: 5px solid #dd3716; }
 #charcoal p.two {
   border-top: none;
   margin-top: 0; }
@@ -429,9 +451,9 @@ footer {
 
 /************* SILLINESS *****************/
 #silliness p.top {
-  border-bottom: 5px solid #dd3716; }
+  border-bottom: 5px solid #e59905; }
 #silliness p.middle {
-  border-left: 5px solid #dd3716; }
+  border-left: 5px solid #e59905; }
 #silliness img.col2 {
   margin-bottom: 5%; }
 @media screen and (min-width: 768px) {
