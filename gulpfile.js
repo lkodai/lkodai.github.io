@@ -1,85 +1,56 @@
 var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    sass = require('gulp-sass'),
-    fileinclude = require('gulp-file-include'),
-    rename = require('gulp-rename'),
-    notify = require('gulp-notify'),
-    livereload = require('gulp-livereload'),
-    lr = require('tiny-lr'),
-    connect = require('gulp-connect'),
-    server = lr();
+    less = require('gulp-less'),
+    path = require('path'),
+    mustache = require("gulp-mustache"),
+    connect = require('gulp-connect');
+    postcss = require('gulp-postcss'),
+    autoprefixer = require('autoprefixer'),
+    cssnano = require('cssnano');
 
-
-// fileinclude: grab partials and render single html file
-// ==========================================
-// gulp.task('fileinclude', function() {
-//   return  gulp.src(['./partials/index.tpl.html'])
-//     .pipe(rename("index.html"))
-//     .pipe(fileinclude())
-//     .pipe(gulp.dest('./'))
-//     .pipe(livereload(server))
-//     .pipe(notify({ message: 'Includes: included' }));
-// });
-gulp.task('fileinclude', function() {
-  gulp.src(['./tpl/*.tpl.html', './tpl/*/*.tpl.html'])
-    .pipe(fileinclude())
-    .pipe(rename({
-        extname: ""
-      }))
-    .pipe(rename({
-        extname: ".html"
-      }))
-    .pipe(gulp.dest(''))
-    .pipe(livereload(server))
-    .pipe(notify({ message: 'Includes: included' }));
-});
-//  Sass: compile sass to css task
-//===========================================
-gulp.task('sass', function() {
-  return gulp.src('css/source/app.scss')
-    .pipe(sass({ style: 'expanded', errLogToConsole: true}))
-    .pipe(gulp.dest('css'))
-    .pipe(livereload(server))
-    .pipe(notify({ message: 'SO Sassy!' }));
+//mustache
+//======================
+gulp.task('mustache', function () {
+  return gulp.src("./src/*.mustache")
+    .pipe(mustache('./src/mustache-test.json', {
+      extension: '.html'
+    }))
+    .pipe(gulp.dest("."));
 });
 
-
-//  Connect: sever task
-//===========================================
-gulp.task('connect', connect.server({
-  port: 1337,
-  root: [__dirname],
-  livereload: false
-}));
-
-
-//  Watch and Livereload
-//===========================================
-gulp.task('watch', function() {
-
-  // Listen on port 35729
-  server.listen(35729, function (err) {
-    if (err) {
-      return console.error(err) 
-      //TODO use notify to log a message on Sass compile fail and Beep
-    };
-
-    //Watch task for sass
-    gulp.watch('css/source/**/*.scss', ['sass']);
-
-    // watch task for gulp-includes
-    gulp.watch('partials/**/*.html', ['fileinclude']);
-    gulp.watch('tpl/**', ['fileinclude']);
-
-  });
-
+//compile LESS
+// =====================
+gulp.task('less', function () {
+  return gulp.src('./src/styles/*.less')
+    .pipe(less({
+      strictMath: 'on',
+    }))
+    .pipe(gulp.dest('.'));
 });
+
+//PostCss (autoprefixer)
+//======================
+gulp.task('postcss', function() {
+  var plugins = [
+    autoprefixer({browsers: ['> 1%'], cascade: false}),
+    cssnano
+  ];
+  return gulp.src('./*.css')
+  .pipe(postcss(plugins))
+  .pipe(gulp.dest('.'));
+});
+
+//start server 
+//=====================
+gulp.task('connect', function() {
+  connect.server();
+});
+
+
 
 
 //  Default Gulp Task
 //===========================================
-gulp.task('default', ['fileinclude', 'sass', 'connect', 'watch'], function() {
-
+gulp.task('default', ['mustache', 'less', 'connect'], function() {
 });
 
 
